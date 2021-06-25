@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beautysalon</title>
-    
+    <!-- SWIPER (minimal version) -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> 
+
     <!-- STYLES -->
     <link rel="stylesheet" href="style.css"> 
     
@@ -26,7 +28,7 @@
             <li><a class="title" href="#home">Início</a></li>
             <li><a class="title" href="#about">Sobre</a></li>
             <li><a class="title" href="#services">Serviços</a></li>
-            <li><a class="title" href="#testemonial">Depoimentos</a></li>
+            <li><a class="title" href="#testemonials">Depoimentos</a></li>
             <li><a class="title" href="#contact">Contato</a></li>
           </ul>
         </div> <!-- /Menu -->
@@ -105,57 +107,69 @@
 
       <!-- TESTEMONIALS --> 
       <section class="section" id="testemonials">
-        <div class="container grid">
+        <!-- Não precisamos do grid aqui por causa do swiper || a largura padrão é block -->
+        <div class="container"> 
           <header>
             <h2 class="title">Depoimentos de quem já passou por aqui</h2>
           </header>
-          <div class="testemonials">
-            <div class="testemonial">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span> <!-- Aspas -->
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minima excepturi aliquid tempora distinctio provident accusamus iste
-                </p>
-                <cite>
-                  <img src="" alt="">
-                  Wanessa Souza
-                </cite>
-              </blockquote>
-            </div>
-            
-            <div class="testemonial">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span> <!-- Aspas -->
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minima excepturi aliquid tempora distinctio provident accusamus iste
-                </p>
-                <cite>
-                  <img src="" alt="">
-                  Wanessa Souza
-                </cite>
-              </blockquote>
+          <div class="testemonials swiper-container">
+            <div class="swiper-wrapper">
+              <div class="testemonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span> <!-- Aspas -->
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, aliquid accusantium nobis quasi, ipsum excepturi numquam odio odit laboriosam sed, veritatis deserunt totam porro voluptates ad molestiae veniam quis voluptate.
+                  </p>
+                  <cite>
+                    <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="Foto de Alice Martins">
+                    Alice Martins
+                  </cite>
+                </blockquote>
+              </div>
+              
+              <div class="testemonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span> <!-- Aspas -->
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, voluptatem! Possimus, quae reprehenderit laborum sequi accusamus praesentium impedit nesciunt aliquid expedita ullam labore rerum eos, perferendis ut sed molestias accusantium!
+                  </p>
+                  <cite>
+                    <img src="https://randomuser.me/api/portraits/women/58.jpg" alt="Foto de Francisca">
+                    Francisca Maia
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testemonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span> <!-- Aspas -->
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur illo deleniti voluptas reprehenderit libero tempora, at veritatis numquam consequuntur pariatur earum, expedita, debitis praesentium corrupti dolores architecto exercitationem dolore neque!
+                  </p>
+                  <cite>
+                    <img src="https://randomuser.me/api/portraits/women/89.jpg" alt="Foto de Wanessa Souza">
+                    Wanessa Souza
+                  </cite>
+                </blockquote>
+              </div>
             </div>
 
-            <div class="testemonial">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span> <!-- Aspas -->
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minima excepturi aliquid tempora distinctio provident accusamus iste
-                </p>
-                <cite>
-                  <img src="" alt="">
-                  Wanessa Souza
-                </cite>
-              </blockquote>
-            </div>
-
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
-      <!-- ABOUT -->
+
+      <!-- CONTACT -->
+      
     </main>
 
     <footer> </footer>
+    <!-- SWIPER -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- MAIN -->
     <script src="main.js"></script>
+
   </body>
 </html>
