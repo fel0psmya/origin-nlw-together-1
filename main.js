@@ -45,9 +45,4 @@ const scrollReveal = ScrollReveal({
   reset: true
 })
 
-scrollReveal.reveal(
-  `#home .image, #home .text,
-  #about .image, #about .text,
-  #services header, #services .card,
-  #testemonials header, #testemonials .testemonials,
-  #contact .text, #contact .link`, { interval: 100 }) // com crase vc pode organizar em linhas 
+scrollReveal.reveal(`#home .image, #home .text, #about .image, #about .text, #services header, #services .card, #testemonials header, #testemonials .testemonials, #contact .text, #contact .links`, { interval: 100 }) // com crase vc pode organizar em linhas 

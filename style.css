@@ -461,7 +461,47 @@ nav {
   color: var(--base-color);
 }
 
-/*=========== CONTACT ===========*/
+/*=========== FOOTER ===========*/
 #footer {
   background-color: var(--base-color);
 }
+
+#footer .container {
+  color: var(--body-color);
+} 
+
+#footer span {
+  color: var(--body-color);
+}
+
+#footer .about {
+  margin-top: 4rem;
+}
+
+#footer .about .text {
+  padding-top: 0.75rem;
+}
+
+#footer .about .text p {
+  margin-top: 0.75rem;
+}
+
+#footer .social {
+  margin-bottom: 4rem;
+}
+
+#footer .social a {
+  font-size: 1.5rem;
+  margin-right: 2rem;
+  color: var(--body-color);
+  
+  position: relative;
+  top: 0;
+  transition: 0.2s;
+}
+
+#footer .social a:hover {
+  top: -0.5rem;
+
+}
+
