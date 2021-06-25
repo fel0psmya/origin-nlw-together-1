@@ -32,10 +32,15 @@ ul {
 }
 
 /*=========== Layout ===========*/
+html {
+  scroll-behavior: smooth;
+}
+
 .grid {
   display: grid;
   gap: 2rem;
 }
+
 .container {
   margin-left: 1.5rem;
   margin-right: 1.5rem; 
@@ -53,10 +58,6 @@ ul {
 
 .section .title {
   margin-bottom: 1rem;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
