@@ -36,3 +36,19 @@ const swiper = new Swiper ('.swiper-container', {
   mousewheel: true, // botão de rolagem do mouse nos slides 
   keyboard: true, // ativa as setas para passar os slides
 });
+
+/* ScrollReveal */
+const scrollReveal = ScrollReveal({
+  origin: 'top', // onde iniciará
+  distance: '30px',
+  duration: 700,
+  reset: true
+})
+
+scrollReveal.reveal(
+  `#home .image, #home .text,
+  #about .image, #about .text,
+  #services header, #services .card,
+  #testimonials header, #testimonials . testimonials,
+  #contact .text, #contact .link
+  `, { interval: 100 }) // com crase vc pode organizar em linhas 

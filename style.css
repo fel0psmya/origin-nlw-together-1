@@ -429,3 +429,38 @@ nav {
   background: var(--base-color);
 
 }
+
+/*=========== CONTACT ===========*/
+#contact .grid {
+  gap: 4rem;
+}
+
+#contact .text p {
+  margin-bottom: 2rem;
+}
+
+#contact .button {
+  width: 14.75rem;
+}
+
+#contact .button .icon-whatsapp {
+  font-size: 1.5rem;
+  margin-right: 0.625rem;
+}
+
+#contact .links .link {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+#contact .links .link i {
+  margin-right: 0.75rem;
+  font-size: 1.5rem;
+  color: var(--base-color);
+}
+
+/*=========== CONTACT ===========*/
+#footer {
+  background-color: var(--base-color);
+}
