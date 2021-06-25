@@ -49,5 +49,5 @@ scrollReveal.reveal(
   `#home .image, #home .text,
   #about .image, #about .text,
   #services header, #services .card,
-  #testemonials header, #testemonials .testemonial,
+  #testemonials header, #testemonials .testemonials,
   #contact .text, #contact .link`, { interval: 100 }) // com crase vc pode organizar em linhas 
