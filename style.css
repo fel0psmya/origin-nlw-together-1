@@ -479,11 +479,12 @@ nav {
 }
 
 #footer .about .text {
-  padding-top: 0.75rem;
+  padding-top: 0.75rem; 
 }
 
 #footer .about .text p {
   margin-top: 0.75rem;
+  color: var(--text-color-light);
 }
 
 #footer .social {
@@ -493,7 +494,7 @@ nav {
 #footer .social a {
   font-size: 1.5rem;
   margin-right: 2rem;
-  color: var(--body-color);
+  color: var(--text-color-light);
   
   position: relative;
   top: 0;
@@ -501,7 +502,41 @@ nav {
 }
 
 #footer .social a:hover {
-  top: -0.5rem;
+  top: -0.3rem;}
 
+/*=========== BOTÃO DE VOLTAR AO INÍCIO ===========*/
+#back-to-top {
+  background: var(--base-color);
+  color: var(--text-color-light);
+  
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  clip-path: circle();
+
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+
+  /* Visibilidade inicial */
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateY(200%);
 }
 
+#back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======== RESPONSIVIDADE (MEDIA QUERIES ========*/
+/* Very large devices: 1200 > */
+/* Large devices: 1023 > */
+/* Large devices: 992 > */
+@media (min-width: 992px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}
+/* Medium devices: 767 > */

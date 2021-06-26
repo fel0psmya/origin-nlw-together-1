@@ -16,16 +16,16 @@ for (const link of links) {
 }
 
 /*Mudar a sombra do header ao dar scroll*/
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
-
-window.addEventListener('scroll', function(){
+function changeHeaderWhenScroll () {
+  const header = document.querySelector('#header')
+  const navHeight = header.offsetHeight
+  
   if(window.scrollY >= navHeight) {
     header.classList.add('scroll')
   } else {
     header.classList.remove('scroll')
   }
-})
+}
 
 /* Testemonials slider */
 const swiper = new Swiper ('.swiper-container', {
@@ -45,4 +45,19 @@ const scrollReveal = ScrollReveal({
   reset: true
 })
 
-scrollReveal.reveal(`#home .image, #home .text, #about .image, #about .text, #services header, #services .card, #testemonials header, #testemonials .testemonials, #contact .text, #contact .links`, { interval: 100 }) // com crase vc pode organizar em linhas 
+scrollReveal.reveal(`#home .image, #home .text, #about .image, #about .text, #services header, #services .card, #testemonials header, #testemonials .testemonials, #contact .text, #contact .links, #footer .container`, { interval: 100 }) // com crase vc pode organizar em linhas 
+
+/* Back-to-top */
+function backToTop() {
+  const backToTopButton = document.querySelector('#back-to-top');
+  if (window.scrollY > 200) {
+    backToTopButton.classList.add('show');
+  } else {
+    backToTopButton.classList.remove('show');
+  }
+}
+
+window.addEventListener('scroll', function() {
+  changeHeaderWhenScroll();
+  backToTop();
+})
