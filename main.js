@@ -35,6 +35,12 @@ const swiper = new Swiper ('.swiper-container', {
   },
   mousewheel: true, // botão de rolagem do mouse nos slides 
   keyboard: true, // ativa as setas para passar os slides
+  breakpoints:  { // media queries breakpoints 
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true // fixar o tamanho  dps sçides
+    }  
+  }
 });
 
 /* ScrollReveal */
@@ -45,7 +51,7 @@ const scrollReveal = ScrollReveal({
   reset: true
 })
 
-scrollReveal.reveal(`#home .image, #home .text, #about .image, #about .text, #services header, #services .card, #testemonials header, #testemonials .testemonials, #contact .text, #contact .links, #footer .container`, { interval: 100 }) // com crase vc pode organizar em linhas 
+scrollReveal.reveal(`#home .image, #home .text, #about .image, #about .text, #services header, #services .cards, #testemonials header, #testemonials .testemonials, #contact .text, #contact .links, #footer .container`, { interval: 100 }) // com crase vc pode organizar em linhas 
 
 /* Back-to-top */
 function backToTop() {
