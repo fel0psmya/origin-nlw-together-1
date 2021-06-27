@@ -63,16 +63,35 @@ function backToTop() {
 }
 
 /* Menu ativo de acordo com a seção selecionada */
-const sections = document.querySelectorAll('main section[id]'); // conter ID
+const sections = document.querySelectorAll('main section[id]') // conter ID
 function activateMenuAtCurrentSection() {
-  
+  checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4 // deslocamento no eixo y + (altura * 8) / 4
+
+  for (const section of sections) {
+    sectionTop = section.offsetTop
+    sectionHeight = section.offsetHeight
+    sectionId = section.getAttribute('id')
+    
+    checkpointStart = checkpoint >= sectionTop
+    checkpointEnd = checkpoint <= sectionTop + sectionHeight
+
+    if (checkpointStart && checkpointEnd) {
+      document
+        .querySelector('nav ul li a[href*=' + sectionId + ']') // *= -> valor especifico
+        .classList.add('active')
+    } else {
+      document
+        .querySelector('nav ul li a[href*=' + sectionId + ']') // *= -> valor especifico
+        .classList.remove('active')
+    }
+  }
 }
 
 /* Scroll */
 window.addEventListener('scroll', function() {
-  changeHeaderWhenScroll();
-  backToTop();
-  activateMenuAtCurrentSection();
+  changeHeaderWhenScroll()
+  backToTop()
+  activateMenuAtCurrentSection()
 })
 
 
