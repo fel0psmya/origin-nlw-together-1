@@ -103,16 +103,17 @@ body {
 }
 
 .divider-1 {
-  height: 1px;
+  height: 1.2px;
   background: linear-gradient(
     270deg,
     hsla(var(--hue), 36%, 57%, 1),
     hsla(var(--hue),  65%, 88%, 0.34)
   );
+  z-index: 1;
 }
 
 .divider-2 {
-  height: 1px;
+  height: 1.2px;
   background: linear-gradient(
     270deg,
     hsla(var(--hue),  65%, 88%, 0.34),

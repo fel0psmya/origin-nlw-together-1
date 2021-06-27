@@ -16,10 +16,9 @@ for (const link of links) {
 }
 
 /*Mudar a sombra do header ao dar scroll*/
+const header = document.querySelector('#header')
+const navHeight = header.offsetHeight
 function changeHeaderWhenScroll () {
-  const header = document.querySelector('#header')
-  const navHeight = header.offsetHeight
-  
   if(window.scrollY >= navHeight) {
     header.classList.add('scroll')
   } else {
@@ -54,8 +53,8 @@ const scrollReveal = ScrollReveal({
 scrollReveal.reveal(`#home .image, #home .text, #about .image, #about .text, #services header, #services .cards, #testemonials header, #testemonials .testemonials, #contact .text, #contact .links, #footer .container`, { interval: 100 }) // com crase vc pode organizar em linhas 
 
 /* Back-to-top */
+const backToTopButton = document.querySelector('#back-to-top');
 function backToTop() {
-  const backToTopButton = document.querySelector('#back-to-top');
   if (window.scrollY > 200) {
     backToTopButton.classList.add('show');
   } else {
@@ -63,7 +62,17 @@ function backToTop() {
   }
 }
 
+/* Menu ativo de acordo com a seção selecionada */
+const sections = document.querySelectorAll('main section[id]'); // conter ID
+function activateMenuAtCurrentSection() {
+  
+}
+
+/* Scroll */
 window.addEventListener('scroll', function() {
   changeHeaderWhenScroll();
   backToTop();
+  activateMenuAtCurrentSection();
 })
+
+
